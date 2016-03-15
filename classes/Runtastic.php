@@ -104,7 +104,7 @@ class Runtastic
 
 	private function GetLoginFormFields()
 	{
-		curl_setopt($this->curl_session, CURLOPT_URL, self::BASE_URL);
+		curl_setopt($this->curl_session, CURLOPT_URL, self::BASE_URL.'/login.html');
 		$res = curl_exec($this->curl_session);
 		if ($res === false)
 			throw new Exception("Failed to load login page. ".curl_error($this->curl_session));
